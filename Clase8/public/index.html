@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h1>Agregar Nueva Usuario!</h1>
-                <form method="post" action="/api/users">
+                <form method="post" action="/api/users" enctype="multipart/form-data">
                     <div class="mb-3">
                       <label for="nombre" class="form-label">Nombre</label>
                       <input type="text" class="form-control" id="nombre" name="nombre">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Imagen</label>
-                        <input type="file" class="form-control" id="file" name="file">
+                        <input type="file" class="form-control" id="imagen" name="imagen">
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>

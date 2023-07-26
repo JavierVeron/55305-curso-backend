@@ -19,7 +19,7 @@ usersRouter.get("/", (request, response) => {
     response.send({users});
 });
 
-usersRouter.post("/", uploader.single("file"), (request, response) => {
+usersRouter.post("/", uploader.single("imagen"), (request, response) => {
     if (!request.file) {
         response.status(400).send({status:"Error", message:"Error! Debe cargar una imagen!"});
         return false;
