@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="display-1">Hola, <b>{{user.nombre}}</b>!</p>
+            {{#if isAdmin}}
+                <p class="display-5">Menú de Comida</p>
+                <ul>
+                    {{#each comidas}}
+                        <li>{{this.nombre}} ${{this.precio}}</li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p>Error! No tenes permisos para ver el Menú de Comida!</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
