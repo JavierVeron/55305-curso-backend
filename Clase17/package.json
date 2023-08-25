@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "clase17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.4.3",
+    "mongoose-paginate-v2": "^1.7.31"
+  }
+}
