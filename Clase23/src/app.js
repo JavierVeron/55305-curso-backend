@@ -10,6 +10,7 @@ import jwt from "jsonwebtoken";
 import dictionaryRouter from "./routes/dictionary.routes.js";
 import petsRouter from "./routes/pets.routes.js";
 import UsersRouter from "./routes/user.router.js";
+import SessionsRouter from "./routes/sessions.routes.js";
 const PRIVATE_KEY = "S3CR3T0";
 
 const app = express();
@@ -32,7 +33,9 @@ app.use("/api/dictionary", dictionaryRouter);
 app.use("/api/pets", petsRouter);
 
 const usersRouter = new UsersRouter();
+const sessionsRouter = new SessionsRouter();
 app.use("/api/users", usersRouter.getRouter());
+app.use("/api/sessions", sessionsRouter.getRouter());
 
 app.get("/", (req, res) => {
     res.render("home");   
